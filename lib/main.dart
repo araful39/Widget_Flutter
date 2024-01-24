@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled15/stepper_widget.dart';
 
 import 'date_picker.dart';
 
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  MyHomePage(),
+      home:  StepperWidget(),
     );
   }
 }
