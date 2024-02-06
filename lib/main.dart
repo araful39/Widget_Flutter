@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:untitled15/stepper_widget.dart';
 
-import 'date_picker.dart';
+import 'for_loop.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  StepperWidget(),
+      home:  const ForLoop(),
     );
   }
 }

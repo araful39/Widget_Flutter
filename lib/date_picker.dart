@@ -7,12 +7,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
- DateTime selectetDate=DateTime.now();
+ DateTime selectedDate=DateTime.now();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Date Time"),
+        title: const Text("Date Time"),
         centerTitle: true,
 
       ),
@@ -20,21 +20,21 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("${selectetDate.year}-${selectetDate.month}-${selectetDate.day}"),
-            SizedBox(
+            Text("${selectedDate.year}-${selectedDate.month}-${selectedDate.day}"),
+            const SizedBox(
               height: 20,
             ),
             ElevatedButton(onPressed: ()async{
 final DateTime?dateTime=await showDatePicker(context: context,
-    initialDate: selectetDate,
+    initialDate: selectedDate,
     firstDate: DateTime(2000),
     lastDate: DateTime(3000));
 if(dateTime!=null){
   setState(() {
-    selectetDate=dateTime;
+    selectedDate=dateTime;
   });
 }
-            }, child: Text("Choose Date"))
+            }, child: const Text("Choose Date"))
           ],
         ),
       ),
